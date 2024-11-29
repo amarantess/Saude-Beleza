@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Variáveis para cores padronizadas*/
+:root{
+    --preto: black;
+    --branco: white;
+    --cinza: #eaeaea;
+    --verde: rgb(6, 184, 6);
+    --verde2: rgb(82, 219, 82);
+
+    --violt: rgb(238,130,238);
+    --orchd: rgb(218,112,214);
+    --viodk: rgb(148,0,211);
+    --indig: rgb(75,0,130);
+}
+
+* {margin: 0; border: 0; padding: 0;}
+
+/* Configuração padrão para todo código HTML*/
+html{
+    font-family: "Roboto", sans-serif;
+    font-size: 1em;
+    letter-spacing: 1px;
+}
+
+header{
+    background: linear-gradient(var(--violt), var(--orchd), var(--orchd));
+    color: var(--branco);
+    padding: auto;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+}
+
+@media (min-width: 320px) and (max-width: 820px) {
+    header{
+        background: linear-gradient(var(--violt), var(--orchd), var(--orchd));
+        color: var(--branco);
+        padding: auto;
+        position: fixed;
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+    }
+}
+
+nav{
+    display: block;
+    text-align: center;
+    font-size: 1.2em;
+    word-spacing: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: var(--branco);
+    font-weight: bold;
+}
+
+a:hover{
+    background-color: var(--viodk);
+}
+
+.btn{
+    display: block;
+    width: 160px;
+    background-color: var(--indig);
+    padding: 10px 25px 10px 25px;
+    border-radius: 20px;
+    font-size: 1em;
+    margin: auto;
+    text-align: center;
+}
+
+/* A cor muda quando passa a seta no link */
+a:hover{color: var(--cinza);}
+
+body{
+    background-color: var(--branco);
+}
+
+main{
+    background-color: var(--branco);
+    padding: 1%;
+    margin: auto;
+    width: 90%;
+}
+
+aside{
+    background-color: var(--branco);
+    padding: 1%;
+    margin: auto;
+    width: 90%;
+}
+
+footer{
+    background: linear-gradient(var(--orchd), var(--orchd), var(--violt));
+    color: var(--branco);
+    padding: 0.5%;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px var(--preto);
+}
+
+@media (min-width: 320px) and (max-width: 820px) {
+    footer{
+        background: linear-gradient(var(--orchd), var(--orchd), var(--violt));
+        color: var(--branco);
+        padding: 0.5%;
+        text-align: center;
+        font-weight: bold;
+        text-shadow: 1px 1px 1px var(--preto);
+    }
+}
+
+/* Configurações de Títulos Headline */
+h1 {font-size: 2em; margin-top: 1.5%; color: var(--indig);}
+h2 {font-size: 1.5em; color: var(--indig);}
+h3 {
+    font-size: 3em; 
+    font-family: "Great Vibes", cursive; 
+    text-shadow: 2px 2px var(--preto);
+}
+h4 {
+    font-size: 1.2em;
+    text-shadow: 2px 2px var(--preto);
+}
+h1,h2,h3,h4,h5,h6 {padding-top: 0.5%; padding-bottom: 0.5%;}
+
+/* Configurações de Imagens */
+img{
+    width: 100%;
+    padding-top: 2%;
+}
+
+.img-site{
+    width: 100%;
+    padding-top: 2%;
+    background: radial-gradient(var(--orchd), var(--branco), var(--branco));
+    border-radius: 100%;
+}
+
+/* Configurações de Parágrafos */
+p{
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+}
+
+p.especialistas{
+    text-align: center;
+    color: var(--indig);
+    font-weight: bold;
+}
+
+p#servicos{
+    text-align: center;
+    color: var(--indig);
+    font-weight: bold;
+    font-size: 1.3em;
+    text-decoration: underline;
+}
+
+/* Configurações de Parágrafos para dispositivos móveis */
+@media (min-width: 320px) and (max-width: 820px) {
+    p{
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+}
+
+/* Divs */
+.separador{
+    margin-top: 7%;
+}
+
+.separador-conteudo{
+    margin-top: 0.5%;
+}
+
+/* Configurações de Divs para dispositivos móveis */
+@media (min-width: 320px) and (max-width: 820px) {
+    .separador{
+        margin-top: 15%;
+    }
+
+    .separador-conteudo{
+        margin-top: 0.5%;
+    }
+}
+
+/* Configurações da Grade de Conteúdo - Grids */
+.grid-conteudo{
+    background-color: var(--branco);
+    padding-top: 120px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    max-width: 1024px;
+    margin: auto;
+    gap: 10px;
+}
+
+.grid div {
+    background-color: var(--branco); 
+    text-align: center; 
+    padding: 2px;
+}
+
+/* Configurações de Flexbox */
+.grid-equipe{
+    background-color: var(--branco);
+}
+
+.grid-equipe-sb{
+    display: flex; /* Alterando o tipo de display para flex */
+    justify-content: center; /* Centralizando horizontalmente */
+    align-items: center; /* Centralizando verticalmente */
+    flex-wrap: wrap; /* Alinhar ou "quebrar" conforme o tamanho da tela*/
+    max-width: 1024px;
+    margin: auto;
+    gap: 8px;
+    padding: auto;
+}
+
+.grid div {
+    background-color: var(--branco); 
+    text-align: center; 
+    padding: 2px;
+}
+
+/* Configuração de Grid para mobile */
+@media (min-width: 320px) and (max-width: 820px) {
+    .grid-conteudo{
+        background-color: var(--branco);
+        padding-top: 100px;
+    }
+    
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        max-width: 1024px;
+        margin: auto;
+        gap: 2px;
+    }
+    
+    .grid div {
+        background-color: var(--branco); 
+        text-align: center; 
+        padding: 2px;
+    }
+}
+
+/* Configurações para Botões de Ação */
+button{
+   padding: 8px 20px 8px 20px;
+   background-color: var(--verde);
+   color: var(--branco);
+   border-radius: 10px;
+   font-weight: bold;
+   font-size: 1em;
+   display: block;
+   margin: auto;
+   transition: 0.4s ease;
+}
+
+button:hover{background: var(--verde2); text-shadow: 1px 1px var(--preto);}
+
+ul{
+    padding-left: 3%;
+}
+
+.video{
+    display: block;
+    text-align: center;
+    margin: auto;
+    padding: 1%;
+    background-color: rgba(238,130,238, 0.15);
+    border-radius: 10px;
+}
+
+@media (min-width: 320px) and (max-width: 820px) {
+    div.video{
+        position: relative;
+        padding-bottom: 50%;
+        background-color: rgba(238,130,238, 0.15);
+        border-radius: 10px;
+    }
+
+    div.video > iframe {
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        width: 90%;
+        height: 90%;
+    }
+}
+
+/* Whatsapp */
+#whats{
+    width: 90px;
+    height: 50px;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    text-align: center;
+    margin: 6em;
+    margin-right: 60px;
+    color: var(--indig);
+    text-shadow: 1px 1px 1px var(--branco);
+    z-index: 1;
+}
+
+@media (min-width: 320px) and (max-width: 820px) {
+    #whats{
+        width: 70px;
+        height: 40px;
+        right: 0;
+        bottom: 0;
+        position: fixed;
+        text-align: center;
+        margin: 6em;
+        margin-right: auto;
+        z-index: 1;
+        color: var(--indig);
+        text-shadow: 1px 1px 1px var(--branco);
+    }
+}
+
+.redes-sociais{
+    width: 50px;
+    height: 50px;
+}
